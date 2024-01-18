@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en"> 
+  <head>
+    <title>Home</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/logo_site_yeni.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CPT+Serif:400,700">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel"> 
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="images/logo_site_yeni.png" alt="" width="140" height="57" srcset="images/logo-default-280x113.png 2x"/></a></div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        </div>
+      </header>
+      <!-- Swiper-->
+      <section class="section section-lg section-main-bunner section-main-bunner-filter text-center">
+        <div class="main-bunner-img" style="background-image: url(&quot;images/yemek_foto1.jpg&quot;); background-size: cover;"></div>
+        <div class="main-bunner-inner">
+          <div class="container">
+            <div class="box-default">
+              <h1 class="box-default-title">Welcome</h1>
+              <div class="box-default-decor"></div>
+              <p class="big box-default-text">We will help you find the most loved and popular dishes around you and guide you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Offers-->
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-md-9 col-lg-7 wow-outer">
+              <div class="wow slideInDown">
+                  <input class="input-location" style="width: 100% ; height: 60px ; text-align:center" type="text" id="place-input" placeholder="Search in any location you want !">
+                  <div id="coordinates">
+                    <label><strong>We are here now : </strong></strong><span id="currentAddress">...</span> </label>
+                  </div>
+                  <br>
+                  <div class="wow slideInDown">
+                    <h4>Distance(Km):</h4>
+                    <select id="distanceSelect" name="distance">
+                     <option value="1000">1</option>
+                     <option value="5000">5</option>
+                     <option value="10000">10</option>
+                    </select>
+                  </div><br>
+                  <button class="save-button" onclick="saveToTextFile()">Use this information to find favorite dishes</button><br>
+                <br>
+                <h2>Learn now the most popular dishes in your coordinates .</h2>
+                <p class="text-opacity-80"><u>Popular Dishes in Your Coordinates</u></p>
+              </div>
+            </div>
+          </div>
+          <div class="row row-20 row-lg-30">
+            <div class="col-md-6 col-lg-4 wow-outer">
+              <div class="wow fadeInUp">
+                <div class="product-featured">
+                  <div class="product-featured-figure"><img  id="resim1" src=""/>
+                    <div class="product-featured-button"><a id="hemenyemek1" class="button button-primary" href="#" onclick="hemenGoster()">Examine on map !</a></div>
+                  </div>
+                  <div class="product-featured-caption">
+                    <h4><a id="yemek1" class="product-featured-title" href="#" onclick="redirectToRestaurantPage()"></a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow-outer">
+              <div class="wow fadeInUp">
+                <div class="product-featured">
+                  <div class="product-featured-figure"><img  id="resim2" src=""/>
+                    <div class="product-featured-button"><a id="hemenyemek2" class="button button-primary" href="#" onclick="hemenGoster()">Examine on map !</a></div>
+                  </div>
+                  <div class="product-featured-caption">
+                    <h4><a id="yemek2" class="product-featured-title" href="#" onclick="redirectToRestaurantPage()"></a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow-outer">
+              <div class="wow fadeInUp">
+                <div class="product-featured">
+                  <div class="product-featured-figure"><img  id="resim3" src=""/>
+                    <div class="product-featured-button"><a id="hemenyemek3" class="button button-primary" href="#" onclick="hemenGoster()">Examine on map !</a></div>
+                  </div>
+                  <div class="product-featured-caption">
+                    <h4><a id="yemek3" class="product-featured-title" href="#" onclick="redirectToRestaurantPage()"></a></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-lg bg-gray-1">
+        <div class="container">
+          <h2 class="text-center">People's Choices</h2>
+          <div class="row">
+            <div class="col-12">
+              <div class="tabs-custom tabs-horizontal tabs-classic" id="tabs-1">
+                <ul class="nav nav-tabs nav-tabs-classic">
+                  <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-1-1" data-toggle="tab">Meals</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-2" data-toggle="tab">Desserts</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-3" data-toggle="tab">Beverages</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-1-1">
+                    <div class="box-event-modern">
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Pizza')">Pizza</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>with Lots of Ingredients</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Hot Dog')">Hot Dog</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>So Hot</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Hamburger ')">Hamburger</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Fresh Ingredients</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Burrito')">Burrito</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Mexican Food</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-1-2">
+                    <div class="box-event-modern">
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('CheeseCake')">CheeseCake</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Delicious</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Dondurma')">Donut</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Round</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Ice Cream')">Ice Cream</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>So Cool</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Waffle')">Waffle</a></h4>>
+                        <div class="event-item-modern-text">
+                          <p>Lots of Fruits</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tabs-1-3">
+                    <div class="box-event-modern">
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Coffee')">Coffee</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Exquisite Scent</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Wine')">Wine</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Delightful Taste</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Juice')">Juice</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Fresh</p>
+                        </div>
+                      </div>
+                      <div class="event-item-modern">
+                        <h4><a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Cocktail')">Cocktail</a></h4>
+                        <div class="event-item-modern-text">
+                          <p>Taste from the Mixture</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="bg-gray-1">
+        
+        <section class="section section-lg section-inset-1 bg-gray-1 pt-lg-0">
+          <div class="container">
+            <div class="row row-50 justify-content-xl-between align-items-lg-center">
+              <div class="col-lg-6 wow fadeInLeft">
+                <div class="box-image"><img class="box-image-static" src="images/hakk_arka.gif" alt="" width="483" height="327"/><img class="box-image-position" src="images/hakk_on.gif" alt="" width="341" height="391"/>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xl-5 wow fadeInRight">
+                <h2>About-Us</h2>
+                <p>Somethigs</p>
+                <p>More Somethings</p><img src="images/hakk_alt.gif" alt="" width="140" height="50"/>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <h2 style="text-align: center;">Do you want to try ?</h2><br>
+      <section class="section">
+        <div class="row isotope-wrap">
+          
+          <div class="col-12 col-sm-6 col-md-4 isotope-item wow-outer" data-filter="*">
+            <div class="wow slideInDown">
+              <div class="gallery-item-classic">
+                <a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('fish')"><img src="images/balik.jpg" alt="" width="640" height="429"/></a>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 isotope-item wow-outer" data-filter="Category 3">
+            <div class="wow slideInDown">
+              <div class="gallery-item-classic">
+                <a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('pancake')"><img src="images/pancake.jpg" alt="" width="640" height="429"/></a>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-4 isotope-item wow-outer" data-filter="Category 3">
+            <div class="wow slideInDown">
+              <div class="gallery-item-classic">
+                <a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('susi')"><img src="images/susi.jpg" alt="" width="640" height="429"/></a>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-12 col-md-6 isotope-item wow-outer" data-filter="Category 3">
+            <div class="wow fadeInUp">
+              <div class="gallery-item-classic">
+                <a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('shrimp')"><img src="images/shrimp.jpg" alt="" width="960" height="429"/></a>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-12 col-md-6 isotope-item wow-outer" data-filter="Category 2">
+            <div class="wow fadeInUp">
+              <div class="gallery-item-classic">
+                <a class="product-featured-title" href="#" onclick="redirectToRestaurantPage('Salad')"><img src="images/salata.jpg" alt="" width="960" height="429"/></a>
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    
+      <!-- Page Footer-->
+      <footer class="section footer-minimal context-dark">
+        <div class="container wow-outer">
+          <div class="wow fadeIn">
+            <div class="row row-60">
+              <div class="col-12"><a href="index.html"><img src="images/logo_site_yeni.png" alt="" width="140" height="57" srcset="images/logo-default-280x113.png 2x"/></a></div>
+              <div class="col-12">
+                <ul class="footer-minimal-nav">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="map-hemen.html">MAP</a></li>
+                </ul>
+              </div>
+              <div class="col-12">
+                <ul class="social-list">
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-youtube-play" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-pinterest-p" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>OverCook</span><span>.&nbsp;</span><span>Bütün Hakları Saklıdır.</span><span>&nbsp;</span><a href="#">Gizlilik politikası</a>. Tasarım&nbsp;orijinal hali&nbsp;<a href="https://www.templatemonster.com">Templatemonster</a><a>&nbsp;tarafından hazırlanmıştır.</a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Python tarafında oluşturulan dosyayı okuma
+      fetch('/src/AI/populer_yemekler.txt')
+          .then(response => response.text())
+          .then(data => {
+              
+              // Her satırı diziye ayır
+            const yemekler = data.trim().split('\n');  // trim() ile baştaki ve sondaki boşlukları temizle
+  
+              // HTML içinde belirli yerlere yerleştirme
+              const yemek1Element = document.getElementById('yemek1');
+              const yemek2Element = document.getElementById('yemek2');
+              const yemek3Element = document.getElementById('yemek3');
+  
+              yemek1Element.innerText = yemekler[0];
+              yemek1Element.onclick = function() {
+                redirectToRestaurantPage(yemekler[0]);
+              };
+  
+              yemek2Element.innerText = yemekler[1];
+              yemek2Element.onclick = function() {
+                redirectToRestaurantPage(yemekler[1]);
+              };
+  
+              yemek3Element.innerText = yemekler[2];
+              yemek3Element.onclick = function() {
+                redirectToRestaurantPage(yemekler[2]);
+              };
+              
+              document.getElementById('hemenyemek1').innerText = 'See ' + yemekler[0] + ' on map!';
+              document.getElementById('hemenyemek2').innerText = 'See ' + yemekler[1] + ' on map!';
+              document.getElementById('hemenyemek3').innerText = 'See ' + yemekler[2] + ' on map!';
+
+
+              document.getElementById('hemenyemek1').onclick = function() {
+                  hemenGoster(yemekler[0]);
+              };
+              
+              document.getElementById('hemenyemek2').onclick = function() {
+                  hemenGoster(yemekler[1]);
+              };
+              
+              document.getElementById('hemenyemek3').onclick = function() {
+                  hemenGoster(yemekler[2]);
+              };
+
+              // Resimleri güncelle Cocktail Juice Wine Coffee Pasta Ice Cream CheeseCake Burrito Hamburger Hot Dog, Pizza
+              const resimler = {
+                'Pizza': 'pizza.jpg',
+                'Hot Dog': 'hotdog.jpg',
+                'Hamburger': 'hamburger.jpg',
+                'Burrito': 'burrito.jpg',
+                'CheeseCake': 'cheesecake.jng',
+                'Ice Cream': 'icecream.jpg',
+                'Waffle': 'wafle.jpg',
+                'Donut': 'donut.jpg',
+                'Coffee': 'coffee.jpg',
+                'Wine': 'wine.jpg',
+                'Juice': 'juice.jpg',
+                'Cocktail': 'cocktail.jpg'
+              };
+              // Her bir yemeğin resmini güncelle
+            for (let i = 1; i <= 3; i++) {
+              const yemekAdi = yemekler[i - 1];
+              const resimAdi = resimler[yemekAdi.trim()];
+              document.getElementById(`resim${i}`).src = `images/${resimAdi}`;
+            }
+          })
+          .catch(error => console.error('Dosya okuma hatası:', error));
+  </script>
+    <script>
+      function redirectToRestaurantPage(keyword) {
+          // Tıklanan yemeğe göre belirli bir sayfaya yönlendirme işlemi
+          window.location.href = `yemek_bilgi.html?category=${encodeURIComponent(keyword)}`;
+      }
+      function hemenGoster(keyword) {
+          // Tıklanan yemeğe göre belirli bir sayfaya yönlendirme işlemi
+          window.location.href = `map-hemen.html?category=${encodeURIComponent(keyword)}`;
+      }
+  </script>
+  <script>
+    function initAutocomplete() {
+        var input = document.getElementById('place-input');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        localStorage.setItem("wearehere", autocomplete);
+        // Ekrana yazdır
+        document.getElementById("currentAddress").textContent = localStorage.getItem("wearehere");
+        // localStorage anahtarları
+        var LATITUDE_KEY = 'latitude';
+        var LONGITUDE_KEY = 'longitude';
+        var ADDRESS_KEY = 'address';
+
+        autocomplete.addListener('place_changed', function() {
+            var place = autocomplete.getPlace();
+
+            if (place.geometry) {
+                // Koordinatları al
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+
+                // Koordinatları ve adresi localStorage'a kaydet
+                localStorage.setItem(LATITUDE_KEY, latitude);
+                localStorage.setItem(LONGITUDE_KEY, longitude);
+                localStorage.setItem(ADDRESS_KEY, place.formatted_address);
+
+                // Ekrana yazdır
+                document.getElementById("currentAddress").textContent = place.formatted_address;
+            } else {
+                console.error("Place details not found for the input.");
+            }
+        });
+
+        // Sayfa yüklendiğinde localStorage'dan koordinatları ve adresi al
+        var savedLatitude = localStorage.getItem(LATITUDE_KEY);
+        var savedLongitude = localStorage.getItem(LONGITUDE_KEY);
+        
+        
+        // Sayfa yüklendiğinde localStorage'dan koordinatları ve adresi al
+        var savedAddress = localStorage.getItem(ADDRESS_KEY);
+
+        // Tip kontrolü yap
+        if (savedAddress && typeof savedAddress === 'string') {
+            // Ekrana yazdır
+            document.getElementById("currentAddress").textContent =savedAddress;
+        }
+
+        if (savedLatitude && savedLongitude) {
+            var coordinatesDiv = document.getElementById('coordinates');
+        }
+    }
+
+    google.maps.event.addDomListener(window, 'load', initAutocomplete);
+</script>
+<script>
+  // Sayfa yüklendiğinde local storage'dan veriyi kontrol et
+  document.addEventListener("DOMContentLoaded", function() {
+    var selectedDistance = localStorage.getItem("selectedDistance");
+
+    if (selectedDistance) {
+      var selectElement = document.getElementById("distanceSelect");
+      var option = selectElement.querySelector('option[value="' + selectedDistance + '"]');
+      
+      if (option) {
+        option.selected = true;
+        console.log("Option selected on page load");
+      }
+      // localStorage'dan alınan değeri yazdır
+      console.log("Selected Distance:", selectedDistance);
+    }
+  });
+
+  // Select elementi değiştiğinde local storage'a kaydet ve konsola yazdır
+var selectElement = document.getElementById("distanceSelect");
+selectElement.addEventListener("change", function() {
+  console.log("Change event triggered");
+  
+  localStorage.setItem("selectedDistance", this.value);
+  console.log("Selected Distance changed:", this.value);
+});
+</script>
+<script>
+  // localStorage anahtarları
+  var LATITUDE_KEY = 'latitude';
+  var LONGITUDE_KEY = 'longitude';
+  var DISTANCE_KEY = 'selectedDistance';
+
+  // Sayfa yüklendiğinde localStorage'dan veriyi al
+  var latitude = localStorage.getItem(LATITUDE_KEY);
+  var longitude = localStorage.getItem(LONGITUDE_KEY);
+  var distance = localStorage.getItem(DISTANCE_KEY);
+
+  // Koordinatları ekrana yazdır
+  document.getElementById('latitude').textContent = latitude || 'N/A';
+  document.getElementById('longitude').textContent = longitude || 'N/A';
+  document.getElementById('distance').textContent = distance || 'N/A';
+
+  // Metin belgesine yazma fonksiyonu
+  function saveToTextFile() {
+    // Yazılacak metin
+    var content = `${latitude}\n${longitude}\n${distance}`;
+
+    // Blob oluştur
+    var blob = new Blob([content], { type: 'text/plain' });
+
+    // Blob'u kullanarak URL oluştur
+    var url = URL.createObjectURL(blob);
+
+    // Dosyayı indirme bağlantısını oluştur
+    var downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.download = 'location_info.txt';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
+</script>
+  </body>
+</html>

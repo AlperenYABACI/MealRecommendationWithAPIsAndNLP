@@ -1,0 +1,314 @@
+body {
+    color: #333;
+    background: #f1f2f7;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.profile-nav, .profile-info {
+    margin-top: 30px;
+}
+
+.profile-nav .user-heading {
+    background: #3498db;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-nav .user-heading a {
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+}
+
+.profile-nav .user-heading a img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.profile-nav .user-heading h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.profile-nav .user-heading p {
+    font-size: 14px;
+}
+
+.profile-nav ul {
+    margin-top: 20px;
+}
+
+.profile-nav ul > li {
+    border-bottom: 1px solid #ebeae6;
+    margin-top: 0;
+    line-height: 40px;
+}
+
+.profile-nav ul > li:last-child {
+    border-bottom: none;
+}
+
+.profile-nav ul > li > a {
+    border-radius: 0;
+    color: #333;
+    border-left: 5px solid #fff;
+}
+
+.profile-nav ul > li > a:hover, .profile-nav ul > li > a:focus, .profile-nav ul li.active  a {
+    background: #f8f7f5 !important;
+    border-left: 5px solid #3498db;
+    color: #333 !important;
+}
+
+/* Footer Stili */
+.footer-classic {
+    padding: 90px 0;
+    font-weight: 400;
+    background: #323232;
+}
+
+.footer-classic .footer-title {
+    color: #ffffff;
+}
+
+.footer-classic p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-classic p.big {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic p.rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-classic p.rights a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-classic .form-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic .form-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic .list-contact-info a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic .list-contact-info a:hover {
+    color: #41A451;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+}
+
+.footer-title + * {
+    margin-top: 30px;
+}
+
+.footer-divider {
+    width: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-classic .footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-modern {
+    position: relative;
+    background: #323232;
+}
+
+.footer-modern > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-modern p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-modern p.big {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-modern p.big a {
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.footer-modern p.big a:hover {
+    color: #41A451;
+}
+
+.footer-modern p.rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-modern p.rights a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-modern * + .rights {
+    margin-top: 25px;
+}
+
+.footer-modern * + .rd-mailform {
+    margin-top: 30px;
+}
+
+.footer-modern .form-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-modern .form-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-modern .icon-bg-white {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.footer-modern .social-list > li {
+    margin-top: 0;
+}
+
+.footer-minimal {
+    padding: 60px 0;
+    text-align: center;
+    background: #323232;
+}
+
+.footer-minimal .icon-bg-white {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.footer-minimal * + .rights {
+    margin-top: 45px;
+}
+
+.footer-minimal .rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-minimal .rights a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-minimal .social-list li {
+    margin-top: 0;
+}
+
+.footer-minimal-nav {
+    display: inline-block;
+}
+
+.footer-minimal-nav li {
+    padding: 0 20px;
+}
+
+.footer-minimal-nav li + li {
+    margin-top: 10px;
+}
+
+.footer-minimal-nav a {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer-minimal-nav a:hover {
+    color: #41A451;
+}
+ul.nav.nav-pills {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul.nav.nav-pills li {
+    display: inline-block;
+    margin-right: 10px; /* İstediğiniz boşluk değerini ayarlayabilirsiniz */
+}
+
+.bio-graph-heading {
+    background: #3498db;
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    padding: 40px 20px;
+    border-radius: 4px 4px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.bio-graph-info {
+    color: #555;
+    overflow: hidden; /* Overflow'u gizleyerek içeriklerin düzgün görünmesini sağlar */
+}
+
+.bio-graph-info h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 20px;
+    color: #3498db; /* Başlık rengi */
+}
+
+.bio-graph-info::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bio-row {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+    padding: 15px; /* içeriğin etrafına boşluk ekler */
+    background-color: #f8f7f5; /* Arka plan rengi */
+    border-radius: 5px; /* Köşeleri yuvarlar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekler */
+}
+
+.bio-row p {
+    margin: 0;
+}
+
+.bio-row p span {
+    display: inline-block;
+    width: 150px; /* Etiketlerin sabit genişliği */
+    font-weight: bold;
+    color: #333; /* Etiket rengi */
+}
+
+.bio-row p span:first-child {
+    color: #e74c3c; /* İlk etiket rengi */
+}
+

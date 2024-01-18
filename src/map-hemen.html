@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Find Eating Something</title>
+    <script></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="module" src="./js/map-hemen.js"></script>
+  </head>
+  <body>
+    <input id="location-search" style="height: 8% ; width: 80%;" type="text" placeholder="Search Eating Something!">
+    <button type="button" onclick="searchLocations()" style="background-color:#4ed0ac; color:black; width:9%; height: 8%;">Search</button>
+    <a href="index.html" >
+      <button style="background-color:#e20606; color:black; width:9%; height: 8%;">Home</button>
+      </a>
+    <div id="map"></div>
+     <script src="https://d3js.org/d3.v5.min.js"></script> <!-- d3 kütüphanesi -->
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap" >
+      var apiKey = "";
+    </script>
+    <script>
+      async function searchLocations() {
+      const keyword = document.getElementById('location-search').value;
+  
+      // URL'ye parametre ekleyerek yönlendir
+      window.location.href = 'map-hemen.html?category=' + encodeURIComponent(keyword);
+  }
+    </script>
+  </body>
+</html>
